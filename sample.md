@@ -7,7 +7,7 @@ Rとstanではじめるベイズ統計モデリングによるデータ分析入
 Makino Lab reading circle  7/1 伊藤冬馬
 ---
 layout:false
-## スライド１
+## githubから編集しても反映されるんかな
 ### スライド１
 ２ページ目
 
