@@ -2,7 +2,7 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-# タイトル
+# Basis of stan coding
 １ページ目
 ---
 layout:false
