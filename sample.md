@@ -3,7 +3,8 @@ layout: true
 class: center, middle, inverse
 ---
 # Basis of stan coding
-１ページ目
+Rとstanではじめるベイズ統計モデリングによるデータ分析入門 
+Makino Lab reading circle  7/1 伊藤冬馬
 ---
 layout:false
 ## スライド１
