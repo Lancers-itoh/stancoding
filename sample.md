@@ -98,16 +98,14 @@ model{
     sales[i] ~ normal(mu, sigma);
   }
 }
-```
-
-
-```cpp
-<pre>
-print()
-</pre>
-```
-<p>事前分布を変更しても事後分布が大きくは変わらないことを調べる作業を感度分析という</p>
-
+50 trillion yen
 ---
-## sampling statement
+## Weak-informative prior distribution
+
+>
+Sometimes, we can estimate the range of parameters</p>
+i.e., Daily sales of a store can not be 50 trillion yen</p>
+
+
+
 ---
