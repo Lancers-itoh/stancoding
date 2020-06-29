@@ -82,10 +82,9 @@ matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 ```
 
 ---
-## sampling statement
+## Sampling statement
 
-<p>Define posterior distribution and<br>
-  samplle data distribution</P>
+<p>Define posterior distribution and samplle data distribution</P>
   
 ```cpp
 //事前分布の設定
@@ -100,6 +99,17 @@ model{
   }
 }
 ```
+
+
+<pre>
+
+```cpp
+print()
+```
+
+</pre>
+
+<p>事前分布を変更しても事後分布が大きくは変わらないことを調べる作業を感度分析という</p>
 ---
 ## sampling statement
 ---
