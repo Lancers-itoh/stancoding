@@ -109,11 +109,16 @@ model{
 
 <p>When we can estimate that the range of parameter bete is -5 to 5, 
   we can specify prior distribution as </p>
- *beta* ~ normal(0, 5);
+ *beta* ~ normal(0, 5); 
+ 
+ <img src = "./Beta_dnorm.png" width = 40%>
 
 #### Bad weak-informative prior distribution
 > beta ~ uniform(-5, 5);<br>
-> beta takes only -5 to 5 values. It's better to allow unexpected number.
+> beta takes only -5 to 5 values. It's better to allow unexpected number. 
+
+<img src = "./dunif.png" width = 40%>
+
 ---
 ## Log-density additional statements
 
