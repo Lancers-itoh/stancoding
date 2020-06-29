@@ -43,8 +43,8 @@ parameters {
 }
 
 model {
-  /*パラメータはわからないけど
-  正規分布に従うと仮定*/
+  //パラメータはわからないけど
+  //標本データは正規分布に従うと仮定
   for (i in 1:N){
     sales[i] ~ normal(mu, sigma);
   }
@@ -91,8 +91,8 @@ matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 mu ~ normal(0, 1000000);
 sigma ~ normal(0, 1000000);
 
-/*パラメータはわからないけど
-  標本データは正規分布に従うと仮定*/
+//パラメータはわからないけど
+//標本データは正規分布に従うと仮定
 model{
   for (i in 1:N){
     sales[i] ~ normal(mu, sigma);
@@ -108,7 +108,8 @@ model{
 <p>i.e., Daily sales of a store can not be 50 trillion yen</p>
 
 <p>When we can estimate that the range of parameter bete is -5 to 5, 
-  we can specify prior distribution as `beta ~ normal(0, 5);`</p>
+  we can specify prior distribution as </p>
+ `beta ~ normal(0, 5);`
 
 #### Bad weak-informative prior distribution</p>
 > beta ~ uniform(-5, 5);<br>
