@@ -53,7 +53,7 @@ generated quantities{
 ## Declaration of variavles
 
 Number
-```
+```cpp
 int N;      // Declare variable N as integer type
 real beta;  // Declare variable beta as real number
 
@@ -63,7 +63,7 @@ int<lower=0, upper=1> range;  // Declare variable 'range' as a real number betwe
 ```
 
 Vector, Matrix 
-```
+```cpp
 //Declared as real number type
 //Index starts from 1
 
@@ -74,7 +74,7 @@ matrix[3,2] mat;              //Declare matrix 'mat' with 3 rows and 2 columns
 ```
 
 Array
-```
+```cpp
 int W[10];                    //Declare array 'W' with integer type of 10 elements
 real X[3,4];                  //Declare array 'X' with real number type of 3 rows and 4 columns
 vector[4] Y[2];               //Declare array 'Y' with two "vectors with four elements
@@ -85,7 +85,7 @@ matrix[3,4] z[5,6];           //Declare array 'matrix' with 5 x 6 matrix with 3 
 ## sampling statement
 ! Sampling date, not MCMC sampe
 *sales* ~ Normal(\mu, \sigma^2);
-```
+```cpp
 model{
   for (i in 1:N){
     sales[i] ~ normal(mu, sigma);
