@@ -43,8 +43,11 @@ parameters {
 }
 
 model {
-  //パラメータmu,sigmaはわからないけど正規分布に従うと仮定
-  sales ~ normal(mu, sigma);
+  /*パラメータはわからないけど
+  正規分布に従うと仮定*/
+  for (i in 1:N){
+    sales[i] ~ normal(mu, sigma);
+  }
 }
 
 ```
@@ -80,9 +83,7 @@ matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 
 ---
 ## sampling statement
-*sales* ~ Normal(μ, $$σ^2$$) 
-
-$$x^2 - 6x + 1 = 0$$
+*sales* ~ Normal(μ, σ^2) 
 
 ```cpp
 model{
@@ -93,9 +94,15 @@ model{
 ```
 ---
 ## sampling statement
-*sales* ~ Normal(\mu, \sigma^2);
-$$ e^{i x} = \cos{x} + i \sin{x} $$
+
+
 ```cpp
+//事前分布の設定
+mu ~ normal(0, 1000000);
+sigma ~ normal(0, 1000000);
+
+/*パラメータはわからないけど
+  標本データは正規分布に従うと仮定*/
 model{
   for (i in 1:N){
     sales[i] ~ normal(mu, sigma);
