@@ -52,35 +52,27 @@ generated quantities{
 
 Number
 ```cpp
-// Declare variable N as integer type
-int N;  
-// Declare variable beta as real number
-real beta;  
+int N;        // Declare variable N as integer type  
+real beta;    // Declare variable beta as real number
 
 //Specify range
-// Declare variable 'sigma' as a real number greater than or equal to zero.
-real<lower=0> sigma;    
-// Declare variable 'range' as a real number between 0 and 1
-int<lower=0, upper=1> range;  
+real<lower=0> sigma;          // Greater than or equal to zero, integer
+int<lower=0, upper=1> range;  // Range 0 to 1, real number
 ```
 
 Vector, Matrix 
 ```cpp
-/*Declared as real number type*/
-/*Index starts from 1*/
-
-vector[3] retu;               // Declare column vector 'retu' with three elements
-row_vector[10] gyou;          // Declare row vector 'gyou' with 10 elements
-
-matrix[3,2] mat;              //Declare matrix 'mat' with 3 rows and 2 columns 
+vector[3] retu;               // Column vector with three elements
+row_vector[10] gyou;          // Row vector with 10 elements
+matrix[3,2] mat;              // Matrix with 3 rows and 2 columns 
 ```
 
 Array
 ```cpp
-int W[10];                    //Declare array 'W' with integer type of 10 elements
-real X[3,4];                  //Declare array 'X' with real number type of 3 rows and 4 columns
-vector[4] Y[2];               //Declare array 'Y' with two "vectors with four elements
-matrix[3,4] z[5,6];           //Declare array 'matrix' with 5 x 6 matrix with 3 x 4 matrix
+int W[10];                    //Array with integer type of 10 elements
+real X[3,4];                  //Array with real number type of 3 rows and 4 columns
+vector[4] Y[2];               //Array with two vectors with four elements
+matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 ```
 
 ---
