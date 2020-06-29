@@ -86,6 +86,7 @@ matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 
 <p>Define posterior distribution and<br>
   samplle data distribution</P>
+  
 ```cpp
 //事前分布の設定
 mu ~ normal(0, 1000000);
@@ -100,4 +101,5 @@ model{
 }
 ```
 ---
-
+## sampling statement
+---
