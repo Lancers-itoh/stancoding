@@ -22,28 +22,40 @@ functionsブロック                   :自作の関数
 <br><b>generated quantitiesブロック    :モデルの推定と別に、事後分布を得体場合はここに指定</b>
 ]
 .left-column[
-```C++
+```cpp
 data {
-  int N;          // サンプルサイズ
-  vector[N] animal_num;   // データ
+
+  //sample size
+  int N;   
+  
+  //data
+  vector[N] animal_num;   
+  
 }
 
 parameters {
-  real<lower=0> mu;       // 平均
-  real<lower=0> sigma;    // 標準偏差
+  
+  // mean
+  real<lower=0> mu;      
+  
+  //Standard diviation
+  real<lower=0> sigma;    
 }
 
 model {
-  // 平均mu、標準偏差sigmaの正規分布
+  
+  Normal distribution with mean mu, var sigma
   animal_num ~ normal(mu, sigma);
 }
 
 generated quantities{
-  // 事後予測分布を得る
+  
+  //Get 
   vector[N] pred;
   for (i in 1:N) {
     pred[i] = normal_rng(mu, sigma);
   }
+  
 }
 
 ```
