@@ -24,31 +24,24 @@ functions{}                    :Define original function here
 .left-column[
 ```cpp
 data {
-  //sample size
   int N;   
-  //data
   vector[N] animal_num;   
 }
 
 parameters {
-  // mean
   real<lower=0> mu;      
-  //Standard diviation
   real<lower=0> sigma;    
 }
 
 model {
-  //Normal distribution with mean mu, var sigma
   animal_num ~ normal(mu, sigma);
 }
 
 generated quantities{
-  //Get posterior distribution 
   vector[N] pred;
   for (i in 1:N) {
     pred[i] = normal_rng(mu, sigma);
   }
-  
 }
 
 ```
