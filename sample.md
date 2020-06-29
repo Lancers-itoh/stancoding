@@ -16,8 +16,9 @@ layout:false
 - functions{}                    
   -Define original function here
 <br>
-- <b>data{}                 
-  - Define used data and its sample size</b>
+<b>
+- data{}                 
+  -Define used data and its sample size</b>
 <br>
 - transformed data{}         
   - Define data transformation
