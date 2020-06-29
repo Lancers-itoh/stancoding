@@ -99,9 +99,10 @@ model{
   }
 }
 ```
+
 <pre>
 ```
-> print()
+print()
 ```
 </pre>
 ---
