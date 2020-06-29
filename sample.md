@@ -104,13 +104,13 @@ model{
 ---
 ## Weak-informative prior distribution
 
-<p>Sometimes, we can estimate the range of parameters.<br>
-i.e., Daily sales of a store can not be 50 trillion yen</p>
+#### Sometimes, we can estimate the range of parameters.
+<p>i.e., Daily sales of a store can not be 50 trillion yen</p>
 
-When we can estimate that the range of parameter bete is -5 to 5,
-`beta ~ normal(0, 5);`
-beta takes values around 5
+<p>When we can estimate that the range of parameter bete is -5 to 5, 
+  we can specify prior distribution as `beta ~ normal(0, 5);`</p>
 
->X beta ~ uniform(-5, 5);
-> beta takes only -5 to 5 values
+#### Bad weak-informative prior distribution</p>
+> beta ~ uniform(-5, 5);<br>
+> beta takes only -5 to 5 values. It's better to afford unexpected number.
 ---
