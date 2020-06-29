@@ -13,13 +13,13 @@ layout:false
 ---
 ## Structure of stan file
 .right-column[
-functionsブロック                   :自作の関数
-<br><b>dataブロック                    :使用するデータやサンプルサイズなどの定義</b>
-<br>transformed dataブロック        :データの変換の指定
-<br><b>parametersブロック              :事後分布を得たいパラメータの一覧の定義</b>
-<br>transformed parametersブロック  :パラメータ変換の指定
-<br><b>modelブロック                   :モデルの構造と指定</b>
-<br><b>generated quantitiesブロック    :モデルの推定と別に、事後分布を得体場合はここに指定</b>
+functions{}                    :Define original function here
+<br><b>data{}                  :Define used data and its sample size</b>
+<br>transformed data{}         :Define data transformation
+<br><b>parameters{}            :Define parameters which you want to know from posterior distribution</b>
+<br>transformed parameters{}   :Define parameters transformation
+<br><b>model{}                 :Define model structure and assignment</b>
+<br><b>generated quantities{}  :Get posterior distribution</b>
 ]
 .left-column[
 ```cpp
@@ -43,7 +43,7 @@ model {
 }
 
 generated quantities{
-  //Get  posterior distribution 
+  //Get posterior distribution 
   vector[N] pred;
   for (i in 1:N) {
     pred[i] = normal_rng(mu, sigma);
@@ -59,12 +59,16 @@ generated quantities{
 
 Number
 ```cpp
-int N;      // Declare variable N as integer type
-real beta;  // Declare variable beta as real number
+// Declare variable N as integer type
+int N;  
+// Declare variable beta as real number
+real beta;  
 
 //Specify range
-real<lower=0> sigma;          // Declare variable 'sigma' as a real number greater than or equal to zero.
-int<lower=0, upper=1> range;  // Declare variable 'range' as a real number between 0 and 1
+// Declare variable 'sigma' as a real number greater than or equal to zero.
+real<lower=0> sigma;    
+// Declare variable 'range' as a real number between 0 and 1
+int<lower=0, upper=1> range;  
 ```
 
 Vector, Matrix 
