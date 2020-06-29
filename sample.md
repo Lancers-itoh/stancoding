@@ -64,8 +64,8 @@ int<lower=0, upper=1> range;  // Declare variable 'range' as a real number betwe
 
 Vector, Matrix 
 ```cpp
-//Declared as real number type
-//Index starts from 1
+/*Declared as real number type*/
+/*Index starts from 1*/
 
 vector[3] retu;               // Declare column vector 'retu' with three elements
 row_vector[10] gyou;          // Declare row vector 'gyou' with 10 elements
