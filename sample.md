@@ -13,18 +13,18 @@ layout:false
 ---
 ## Structure of stan file
 .right-column[
-・functions{}:  Define original function here
+functions{}:  Define original function here
 <br>
-・<b>data{}:  Define used data and its sample size</b>
+<b>data{}:  Define used data and its sample size</b>
 <br>
-・transformed data{}:  Define data transformation
-・<b>parameters{}:  Define parameters which you want to know from posterior distribution</b>
+transformed data{}:  Define data transformation
+<b>parameters{}:  Define parameters which you want to know from posterior distribution</b>
 <br>
-・transformed parameters{}: Define parameters transformation
+transformed parameters{}: Define parameters transformation
 <br>
-・<b>model{}: Define model structure and assignment</b>
+<b>model{}: Define model structure and assignment</b>
 <br>
-・<b>generated quantities{}: Get posterior distribution</b>
+<b>generated quantities{}: Get posterior distribution</b>
 ]
 .left-column[
 ```cpp
