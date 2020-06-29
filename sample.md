@@ -122,6 +122,10 @@ model{
 ---
 ## Log-density additional statements
 
+Likelihood function<br>
+
+$$ e^{i x} = \cos{x} + i \sin{x} $$
+
 ```cpp
 model{
   for (i in 1:N){
