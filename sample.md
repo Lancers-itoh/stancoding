@@ -13,16 +13,16 @@ layout:false
 ---
 ## stanファイルの構造
 ３ページ目
-.left-column[
-functionsブロック               :自作の関数
-dataブロック                    :使用するデータやサンプルサイズなどの定義
-transformed dataブロック        :データの変換の指定
-parametersブロック              :事後分布を得たいパラメータの一覧の定義
-transformed parametersブロック  :パラメータ変換の指定
-modelブロック                   :モデルの構造と指定
-generated quantitiesブロック    :モデルの推定と別に、事後分布を得体場合はここに指定
-]
 .right-column[
+functionsブロック               :自作の関数
+<br>dataブロック                    :使用するデータやサンプルサイズなどの定義
+<br>transformed dataブロック        :データの変換の指定
+<br>parametersブロック              :事後分布を得たいパラメータの一覧の定義
+<br>transformed parametersブロック  :パラメータ変換の指定
+<br>modelブロック                   :モデルの構造と指定
+<br>generated quantitiesブロック    :モデルの推定と別に、事後分布を得体場合はここに指定
+]
+.left-column[
 ```C++
 data {
   int N;          // サンプルサイズ
@@ -51,10 +51,15 @@ generated quantities{
 ]
 
 ---
-## スライド３
-### スライド３
+## 変数の宣言
 ４ページ目
 
 * リンクを貼る
 
 __[Google](https://www.google.co.jp/)__
+---
+layout:false
+### スタンコーディングの詳細
+### 一般化線形モデルの基本
+
+---
