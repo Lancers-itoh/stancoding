@@ -83,7 +83,6 @@ matrix[3,4] z[5,6];           //Declare array 'matrix' with 5 x 6 matrix with 3 
 
 ---
 ## sampling statement
-! Sampling date, not MCMC sampe
 *sales* ~ Normal(\mu, \sigma^2);
 ```cpp
 model{
@@ -93,3 +92,14 @@ model{
 }
 ```
 ---
+## sampling statement
+*sales* ~ Normal(\mu, \sigma^2);
+```cpp
+model{
+  for (i in 1:N){
+    sales[i] ~ normal(mu, sigma);
+  }
+}
+```
+---
+
