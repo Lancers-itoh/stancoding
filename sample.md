@@ -150,5 +150,6 @@ model{
 }
 
 ```
-
+---
+## Evaluation of average difference and generated quantities block
 
