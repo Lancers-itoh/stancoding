@@ -94,6 +94,7 @@ model{
 ---
 ## sampling statement
 *sales* ~ Normal(\mu, \sigma^2);
+$$ e^{i x} = \cos{x} + i \sin{x} $$
 ```cpp
 model{
   for (i in 1:N){
