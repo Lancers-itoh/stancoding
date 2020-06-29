@@ -26,29 +26,25 @@ transformed parameters{}: Define parameters transformation
 <br><br>
 <b>model{}: Define model structure and assignment</b>
 <br><br>
-<b>generated quantities{}: Get posterior distribution</b>
+generated quantities{}: Get posterior distribution
 ]
 .left-column[
 ```cpp
 data {
+  //こういう標本データが与えられていて
   int N;   
-  vector[N] animal_num;   
-}
+  vector[N] sales;   
+
 
 parameters {
-  real<lower=0> mu;      
+  //これらのパラメータを推定したい
+  real mu;      
   real<lower=0> sigma;    
 }
 
 model {
-  animal_num ~ normal(mu, sigma);
-}
-
-generated quantities{
-  vector[N] pred;
-  for (i in 1:N) {
-    pred[i] = normal_rng(mu, sigma);
-  }
+  //パラメータmu,sigmaはわからないけど正規分布に従うと仮定
+  sales ~ normal(mu, sigma);
 }
 
 ```
