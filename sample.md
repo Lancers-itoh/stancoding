@@ -77,7 +77,7 @@ matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 
 ---
 ## sampling statement
-$$ *sales* ~ Normal(\mu, \sigma^2) $$
+*sales* ~ Normal(μ, σ^2) 
 ```cpp
 model{
   for (i in 1:N){
