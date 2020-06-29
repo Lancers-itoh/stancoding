@@ -24,33 +24,26 @@ functionsブロック                   :自作の関数
 .left-column[
 ```cpp
 data {
-
   //sample size
   int N;   
-  
   //data
   vector[N] animal_num;   
-  
 }
 
 parameters {
-  
   // mean
   real<lower=0> mu;      
-  
   //Standard diviation
   real<lower=0> sigma;    
 }
 
 model {
-  
-  Normal distribution with mean mu, var sigma
+  //Normal distribution with mean mu, var sigma
   animal_num ~ normal(mu, sigma);
 }
 
 generated quantities{
-  
-  //Get 
+  //Get  posterior distribution 
   vector[N] pred;
   for (i in 1:N) {
     pred[i] = normal_rng(mu, sigma);
@@ -95,7 +88,7 @@ matrix[3,4] z[5,6];           //Declare array 'matrix' with 5 x 6 matrix with 3 
 
 ---
 ## sampling statement
-*sales* ~ Normal(\mu, \sigma^2);
+$$ *sales* ~ Normal(\mu, \sigma^2) $$
 ```cpp
 model{
   for (i in 1:N){
