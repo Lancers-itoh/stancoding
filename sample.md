@@ -98,7 +98,9 @@ model{
     sales[i] ~ normal(mu, sigma);
   }
 }
-50 trillion yen
+
+```
+
 ---
 ## Weak-informative prior distribution
 
