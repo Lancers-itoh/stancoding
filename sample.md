@@ -7,8 +7,9 @@ class: center, middle, inverse
 <br>Makino Lab reading circle  7/1 伊藤冬馬
 ---
 layout:false
-## githubから編集しても反映されるんかな
-### スライド１
+### スタンコーディングの詳細
+### 一般化線形モデルの基本
+
 ２ページ目
 
 * コードを書く
