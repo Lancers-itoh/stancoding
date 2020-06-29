@@ -4,22 +4,22 @@ class: center, middle, inverse
 ---
 # Basis of stan coding
 <br>Rとstanではじめるベイズ統計モデリングによるデータ分析入門 
-<br>Makino Lab reading circle  7/1 伊藤冬馬
+<br>Makino Lab reading circle  7/1 Itoh Thoma
 ---
 layout:false
 ### スタンコーディングの詳細
 ### 一般化線形モデルの基本
 
 ---
-## stanファイルの構造
+## Structure of stan file
 .right-column[
-functionsブロック               :自作の関数
-<br>dataブロック                    :使用するデータやサンプルサイズなどの定義
+functionsブロック                   :自作の関数
+<br><b>dataブロック                    :使用するデータやサンプルサイズなどの定義</b>
 <br>transformed dataブロック        :データの変換の指定
-<br>parametersブロック              :事後分布を得たいパラメータの一覧の定義
+<br><b>parametersブロック              :事後分布を得たいパラメータの一覧の定義</b>
 <br>transformed parametersブロック  :パラメータ変換の指定
-<br>modelブロック                   :モデルの構造と指定
-<br>generated quantitiesブロック    :モデルの推定と別に、事後分布を得体場合はここに指定
+<br><b>modelブロック                   :モデルの構造と指定</b>
+<br><b>generated quantitiesブロック    :モデルの推定と別に、事後分布を得体場合はここに指定</b>
 ]
 .left-column[
 ```C++
@@ -50,7 +50,7 @@ generated quantities{
 ]
 
 ---
-## 変数の宣言
+## Declaration of variavles
 
 Number
 ```
@@ -82,8 +82,14 @@ matrix[3,4] z[5,6];           //Declare array 'matrix' with 5 x 6 matrix with 3 
 ```
 
 ---
-layout:false
-### スタンコーディングの詳細
-### 一般化線形モデルの基本
-
+## sampling statement
+! Sampling date, not MCMC sampe
+*sales* ~ Normal(\mu, \sigma^2);
+```
+model{
+  for (i in 1:N){
+    sales[i] ~ normal(mu, sigma);
+  }
+}
+```
 ---
