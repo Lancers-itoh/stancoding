@@ -19,7 +19,8 @@ functions{}:  Define original function here
 <b>data{}:  Define used data and its sample size</b>
 <br><br>
 transformed data{}:  Define data transformation
-<b>parameters{}:  Define parameters which you want to know from posterior distribution</b>
+<br><br>
+<b>parameters{}:  Define parameters which you want to know the posterior distribution</b>
 <br><br>
 transformed parameters{}: Define parameters transformation
 <br><br>
