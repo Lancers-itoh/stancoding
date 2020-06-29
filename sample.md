@@ -109,12 +109,13 @@ model{
 
 <p>When we can estimate that the range of parameter bete is -5 to 5, 
   we can specify prior distribution as </p>
- *beta* ~ normal(0, 5); 
+  
+  *beta* ~ normal(0, 5); 
  
  <img src = "./Beta_dnorm.png" width = 40%>
 
 #### Bad weak-informative prior distribution
-> beta ~ uniform(-5, 5);<br>
+> *beta* ~ uniform(-5, 5);<br>
 > beta takes only -5 to 5 values. It's better to allow unexpected number. 
 
 <img src = "./dunif.png" width = 40%>
@@ -123,8 +124,7 @@ model{
 ## Log-density additional statements
 
 Likelihood function<br>
-
-$$ e^{i x} = \cos{x} + i \sin{x} $$
+<img src="https://latex.codecogs.com/gif.latex?f(sales|\mu,&space;\sigma^2&space;)&space;=&space;\prod&space;_{i=1}^N&space;{Normal(sales|\mu,&space;\sigma^2)}" title="f(sales|\mu, \sigma^2 ) = \prod _{i=1}^N {Normal(sales|\mu, \sigma^2)}" />
 
 ```cpp
 model{
@@ -134,7 +134,10 @@ model{
 }
 ```
 
-Modify this sampling statemnt to log-density additionall statement
+Log likelihood is calculated as below<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\sum&space;_{i=1}^Nlog(Normal(sales|\mu,\sigma^2))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum&space;_{i=1}^Nlog(Normal(sales|\mu,\sigma^2))" title="\sum _{i=1}^Nlog(Normal(sales|\mu,\sigma^2))" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=log(Normal(sales|\mu,\sigma^2))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(Normal(sales|\mu,\sigma^2))" title="log(Normal(sales|\mu,\sigma^2))" /></a> is corresponds to normal_lpdf(sales[i] | mu, sigma)
 
 ```cpp
 model{
