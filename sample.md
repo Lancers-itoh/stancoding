@@ -12,7 +12,6 @@ layout:false
 
 ---
 ## stanファイルの構造
-３ページ目
 .right-column[
 functionsブロック               :自作の関数
 <br>dataブロック                    :使用するデータやサンプルサイズなどの定義
@@ -52,11 +51,36 @@ generated quantities{
 
 ---
 ## 変数の宣言
-４ページ目
 
-* リンクを貼る
+Number
+```
+int N;      // Declare variable N as integer type
+real beta;  // Declare variable beta as real number
 
-__[Google](https://www.google.co.jp/)__
+//Specify range
+real<lower=0> sigma;          // Declare variable 'sigma' as a real number greater than or equal to zero.
+int<lower=0, upper=1> range;  // Declare variable 'range' as a real number between 0 and 1
+```
+
+Vector, Matrix 
+```
+//Declared as real number type
+//Index starts from 1
+
+vector[3] retu;               // Declare column vector 'retu' with three elements
+row_vector[10] gyou;          // Declare row vector 'gyou' with 10 elements
+
+matrix[3,2] mat;              //Declare matrix 'mat' with 3 rows and 2 columns 
+```
+
+Array
+```
+int W[10];                    //Declare array 'W' with integer type of 10 elements
+real X[3,4];                  //Declare array 'X' with real number type of 3 rows and 4 columns
+vector[4] Y[2];               //Declare array 'Y' with two "vectors with four elements
+matrix[3,4] z[5,6];           //Declare array 'matrix' with 5 x 6 matrix with 3 x 4 matrix
+```
+
 ---
 layout:false
 ### スタンコーディングの詳細
