@@ -169,10 +169,11 @@ model{
 ## Evaluation of average difference and generated quantities block
 
 #### Get posterior distribution of difference between average of two groups
+#### 
 
 .left-column[
+# R: Data preparation
 ```R
-#Rscript
 > head(file_beer_sales_ab)
    sales beer_name
 1  87.47         A
@@ -197,28 +198,32 @@ data_list_ab <- list{
 ]
 
 .right-column[
-```
+# Stan: Model preparation
+```cpp
 data {
-  int N;                  // サンプルサイズ
-  vector[N] sales_a;      // ビールAの売り上げデータ
-  vector[N] sales_b;      // ビールBの売り上げデータ
+  //以下のデータを使う
+  int N;                
+  vector[N] sales_a;     
+  vector[N] sales_b;     
 }
 
 parameters {
-  real mu_a;                // ビールAの平均
-  real<lower=0> sigma_a;    // ビールAの標準偏差
-  real mu_b;                // ビールBの平均
-  real<lower=0> sigma_b;    // ビールBの標準偏差
+  //これらの事後分布を得たい
+  real mu_a;               
+  real<lower=0> sigma_a;    
+  real mu_b;               
+  real<lower=0> sigma_b;  
 }
 
 model {
-  // 平均mu、標準偏差sigmaの正規分布に従ってデータが得られたと仮定
+  // サンプルの分布は以下の通り
   sales_a ~ normal(mu_a, sigma_a);
   sales_b ~ normal(mu_b, sigma_b);
 }
 
 generated quantities {
-  real diff;                // ビールAとBの売り上げ平均の差
+ // ビールAとBの売り上げ平均の差の乱数
+  real diff;               
   diff = mu_b - mu_a;
 }
 ```
