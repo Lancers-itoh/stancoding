@@ -294,15 +294,16 @@ mcmc_result_6 <- stan(
 ><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
 ---
+
 ## Analysis of variance model
 
-### When explanatory variables are categorical data, dammy variables are used instead.
+#### When explanatory variables are categorical data, dammy variables are used instead.
 |  Categorical data  |  Dammy variable  |
 | ---- | ---- |
 |  Rainy      |  1  |
 |  Sunny      |  0  |
 
-### If there are k categorical variables, k-1 dummy variables are needed
+#### If there are k categorical variables, k-1 dummy variables are needed
 <img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
 <img src="https://latex.codecogs.com/gif.latex?x_{i2}" title="x_{i2}" /> is dummy variable which takes 1 when rainy and takes 0 when sunny<br>
   
@@ -319,8 +320,9 @@ mcmc_result_6 <- stan(
 #### Such a model is called Analysis of variance model 
 
 ---
+
 ## Normal linear model
-### Model that assuming a normal distribution
+#### Model that assuming a normal distribution
 
 <img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
 <img src="https://latex.codecogs.com/gif.latex?x_{i2}" title="x_{i2}" /> is dummy variable which takes 1 when rainy and takes 0 when sunny<br>
@@ -329,7 +331,7 @@ mcmc_result_6 <- stan(
 <img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;\beta_3x_{i3}" title="u_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \beta_3x_{i3}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
- ### Like this model, model that have below properties is called normal linear model
+ #### Like this model, model that have below properties is called normal linear model
  1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
  2. Identity function is kink function
  3. Normal distribution is used as possibility distribution
@@ -337,7 +339,7 @@ mcmc_result_6 <- stan(
  ---
  
 ## Poisson regression model
-### Model that assuming a poisson distribution
+#### Model that assuming a poisson distribution
 #### When responsible values takes integer that greater than 0, poisson distribution is often used. 
 
 <img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;x_{i1}&space;&plus;&space;\beta_2&space;x_{i2}&space;&plus;&space;\beta_3&space;x_{i3}" title="log(\lambda _i) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3}" /><br>
