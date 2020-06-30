@@ -257,7 +257,7 @@ mcmc_result_6 <- stan(
 ```
 
 ---
-#　Generalized linear model (GLM)
+## Generalized linear model (GLM)
 
 - #### Basis of GLM
 - #### Example of GLM
