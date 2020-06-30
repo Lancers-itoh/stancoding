@@ -265,13 +265,10 @@ mcmc_result_6 <- stan(
 
 ---
 ## Possibility distribution・Linear predictor・Link function
-- Responsible valiable:  Interested variable
-
-- Explanatory valiable:  Variable that affect responsible variable
-
-- Liear predictor: Linear combination of explanatory variables
-
-- Link function: Function that connects linear predictor and responsible valiable
+Responsible valiable:  Interested variable<br>
+Explanatory valiable:  Variable that affect responsible variable<br>
+Liear predictor: Linear combination of explanatory variables<br>
+Link function: Function that connects linear predictor and responsible valiable<br>
 
 
 
@@ -298,7 +295,7 @@ mcmc_result_6 <- stan(
 ## Analysis of variance model
 
 #### When explanatory variables are categorical data, dammy variables are used instead.
-|  Categorical data  |  Dammy variable  |
+| Categorical　| Dammy |
 | ---- | ---- |
 |  Rainy      |  1  |
 |  Sunny      |  0  |
