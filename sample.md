@@ -87,13 +87,14 @@ matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 <p>Define posterior distribution and samplle data distribution</P>
   
 ```cpp
-//事前分布の設定
-mu ~ normal(0, 1000000);
-sigma ~ normal(0, 1000000);
-
-//パラメータはわからないけど
-//標本データは正規分布に従うと仮定
 model{
+
+  //事前分布の設定
+  mu ~ normal(0, 1000000);
+  sigma ~ normal(0, 1000000);
+
+  //パラメータはわからないけど
+  //標本データは正規分布に従うと仮定
   for (i in 1:N){
     sales[i] ~ normal(mu, sigma);
   }
