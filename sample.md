@@ -279,7 +279,7 @@ Link function:          Function that connects linear predictor and responsible 
 Link function ( Responsible variables ) = Linear predictor
 ```
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="y = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
+><a href="https://www.codecogs.com/eqnedit.php?latex=u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="u_i = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 
 <!-- section one -->
 > In this case, link function is an identity function<br>
@@ -287,9 +287,9 @@ Link function ( Responsible variables ) = Linear predictor
 ><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
 <!-- section two -->
-<img src="https://latex.codecogs.com/gif.latex?y&space;=&space;sin(\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2)" title="y = sin(\beta_0 + \beta_1x_1 + \beta_1x_2)" /><br>
+><a href="https://www.codecogs.com/eqnedit.php?latex=log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="log(u_i) = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 
-> In this case, link function is a sin()<br>
+>In this case, link function is log()<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=sin()" target="_blank"><img src="https://latex.codecogs.com/gif.latex?sin()" title="sin()" /></a>
 ><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
@@ -352,7 +352,7 @@ Below is the same mean
 #### Model that have below properties is called normal poisson regression model
  1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
  2. Log function is link function
- 3. Poissom distribution is used as possibility distribution
+ 3. Poisson distribution is used as possibility distribution
 
 ---
 #### Logistic regression model
@@ -368,13 +368,33 @@ This is reverse function of logistic function
 <img src="https://latex.codecogs.com/gif.latex?p_i&space;=&space;\mathrm{logitstic}(\mathrm{logit}(p_i))" title="p_i = \mathrm{logitstic}(\mathrm{logit}(p_i))" /><
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" />
 
-Because  logistic
+Because logistic finction takes 0 to 1, it's useful to express possibility
 <img src = "./logistic.png" width = 60%>
+
+#### Model that have below properties is called logistic regression model
+ 1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
+ 2. Logit function is link function
+ 3. Binomial distribution is used as possibility distribution
 
 
 ---
-
 ## Matrix expression of GLM
+#### Poisson regression 
+<img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;.&space;.&space;.&space;&plus;&space;\beta_jx_{ij}&space;.&space;.&space;.&space;&plus;&space;\beta_Jx_{iJ}" title="log(\lambda _i) = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + . . . + \beta_jx_{ij} . . . + \beta_Jx_{iJ}" />
+#### This can be described as followed
+<img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\sum&space;_{j=0}^J\beta_jx_{ij}" title="log(\lambda _i) = \sum _{j=0}^J\beta_jx_{ij}" />
+
+<b>Little complex expression ...</b> 
+
+#### By using matrix, linear predictor can be described as followed
+<img src="https://latex.codecogs.com/gif.latex?x_i\beta&space;=&space;\begin{bmatrix}&space;1&space;&&space;x_{i1}&space;&&space;x_{i2}&space;&&space;x_{i3}&space;\end{bmatrix}\begin{bmatrix}&space;\beta_0\\&space;\beta_1\\&space;\beta_2\\&space;\beta_3\\&space;\end{bmatrix}&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;\beta_3x_{i3}" title="x_i\beta = \begin{bmatrix} 1 & x_{i1} & x_{i2} & x_{i3} \end{bmatrix}\begin{bmatrix} \beta_0\\ \beta_1\\ \beta_2\\ \beta_3\\ \end{bmatrix} = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \beta_3x_{i3}" />
+
+<img src="https://latex.codecogs.com/gif.latex?\lambda&space;_i&space;=&space;x_i\beta" title="\lambda _i = x_i\beta" />
+<img src="https://latex.codecogs.com/gif.latex?\mathrm{y_i&space;}\sim&space;\mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" title="\mathrm{y_i }\sim \mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" />
+<b>Became quit simpler now</b>
+
+
+
 
 ---
 
