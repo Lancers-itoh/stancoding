@@ -110,7 +110,7 @@ model{
 >i.e., Daily sales of a store can not be 50 trillion yen<br>
 
 When we can estimate that range of parameter *beta* is -5 to 5, 
-  we can specify prior distribution as  < br>
+  we can specify prior distribution as 
   
 >  *beta* ~ normal(0, 5); 
  
@@ -336,7 +336,7 @@ Link function:          Function that connects linear predictor and responsible 
  2. Identity function is kink function
  3. Normal distribution is used as possibility distribution
  
- ---
+---
  
 ## Poisson regression model
 #### Model that assuming a poisson distribution
@@ -354,6 +354,9 @@ Link function:          Function that connects linear predictor and responsible 
 #### Logistic regression model
 
 ---
-#### Matrix expression of GLM
+
+## Matrix expression of GLM
+
+---
 
 
