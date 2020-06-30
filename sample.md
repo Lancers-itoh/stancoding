@@ -284,14 +284,14 @@ mcmc_result_6 <- stan(
 <!-- section one -->
 > In this case, link function is an identity function<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=g(u_i)&space;=&space;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g(u_i)&space;=&space;u_i" title="g(u_i) = u_i" /></a><br>
-><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
+><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
 <!-- section two -->
 <img src="https://latex.codecogs.com/gif.latex?y&space;=&space;sin(\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2)" title="y = sin(\beta_0 + \beta_1x_1 + \beta_1x_2)" /><br>
 
 > In this case, link function is a sin()<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=sin()" target="_blank"><img src="https://latex.codecogs.com/gif.latex?sin()" title="sin()" /></a>
-><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
+><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
 ---
 ## Analysis of variance model
@@ -307,7 +307,7 @@ mcmc_result_6 <- stan(
 <img src="https://latex.codecogs.com/gif.latex?x_{i2}" title="x_{i2}" /> is dummy variable which takes 1 when rainy and takes 0 when sunny<br>
   
 <img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}" title="u_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2}" /><br>
-<img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
+<img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
 | Whether | <img src="https://latex.codecogs.com/gif.latex?u_i" title="u_i" /> |
 | ---- | ---- |
@@ -315,5 +315,32 @@ mcmc_result_6 <- stan(
 |  Sunny      |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_1" title="\beta_0 + \beta_1" /></a>  |
 |  Rainy     |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_2" title="\beta_0 + \beta_2" /></a>  |
 
+#### Explanatory variables are categorical data, and possibility distribution is normal distribution.
+#### Such a model is called Analysis of variance model 
 
-  
+---
+## Normal linear model
+### Model that assuming a normal distribution
+
+<img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
+<img src="https://latex.codecogs.com/gif.latex?x_{i2}" title="x_{i2}" /> is dummy variable which takes 1 when rainy and takes 0 when sunny<br>
+<img src="https://latex.codecogs.com/gif.latex?x_{i3}" title="x_{i3}" /> is temperature data<br>
+<!-- equarion -->
+<img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;\beta_3x_{i3}" title="u_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \beta_3x_{i3}" /><br>
+<img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
+
+ ### Like this model, model that have below properties is called normal linear model
+ 1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
+ 2. Identity function is kink function
+ 3. Normal distribution is used as possibility distribution
+ 
+ ---
+ 
+## Poisson regression model
+### Model that assuming a poisson distribution
+#### When responsible values takes integer that greater than 0, poisson distribution is often used. 
+
+<img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;x_{i1}&space;&plus;&space;\beta_2&space;x_{i2}&space;&plus;&space;\beta_3&space;x_{i3}" title="log(\lambda _i) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3}" /><br>
+<img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;\mathrm{Poiss}(\lambda&space;_i)" title="y_i \sim \mathrm{Poiss}(\lambda _i)" /><br>
+
+---
