@@ -126,6 +126,7 @@ model{
 
 ---
 ## Log-density additional statements
+#### Other format of sampling statement in model block 
 
 Likelihood function<br>
 <img src="https://latex.codecogs.com/gif.latex?f(sales|\mu,&space;\sigma^2&space;)&space;=&space;\prod&space;_{i=1}^N&space;{Normal(sales|\mu,&space;\sigma^2)}" title="f(sales|\mu, \sigma^2 ) = \prod _{i=1}^N {Normal(sales|\mu, \sigma^2)}" />
