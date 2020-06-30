@@ -154,3 +154,16 @@ model{
 ---
 ## Evaluation of average difference and generated quantities block
 
+#### Is there a difference in sales between Beer A and Beer B?
+
+###### Classic statistcs: Test difference between average of two groups
+ <p>
+  Test by using assumed distribution like t-distribution
+</p>
+###### Bysian statistcs: Get posterior distribution of difference between average of two groups</p>
+<p>
+  Test by estiated distribution by MCMC
+</p>
+<br>
+<img src = "./2-6-1-beer-ab.png" width = 60%>
+
