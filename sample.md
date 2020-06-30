@@ -221,7 +221,7 @@ model {
 }
 
 generated quantities {
- // ビールAとBの売り上げ平均の差の乱数
+ // ビールAとBの売り上げ平均の差の事後分布を得る
   real diff;               
   diff = mu_b - mu_a;
 }
@@ -229,14 +229,13 @@ generated quantities {
 ]
 
 .right-column[
-- Model of diff can be estimated from mu_a and mu_b
+- Distribution of diff can be estimated from model of mu_a and mu_b
 
 - Unlike mu and sigma, diff is not needed to estimate model
 
 - Generated quantities{} is faster than model{}
 
-- Non related paeameters to estimation is better to
-wiritten in Generated quantities{}
+- Non related paeameters to estimate model is proper to written in Generated quantities{}
 
 ]
 
@@ -245,12 +244,14 @@ wiritten in Generated quantities{}
 
 #### Get posterior distribution of difference between average of two groups
 
-```
+<p>Rscriot</p>
+```R
 # 乱数の生成
 mcmc_result_6 <- stan(
-  file = "2-6-5-difference-mean.stan",
-  data = data_list_db,
+  file = "2-6-5-difference-mean.stan", 
+  data = data_list_db,  
   seed = 1
 )
-
 ```
+
+
