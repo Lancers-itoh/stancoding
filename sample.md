@@ -169,8 +169,7 @@ model{
 ---
 ## Evaluation of average difference and generated quantities block
 
-#### Get posterior distribution of difference between average of two groups
-##### R: Data preparation
+#### R: Data preparation
 ```R
 > head(file_beer_sales_ab)
    sales beer_name
@@ -195,8 +194,8 @@ data_list_ab <- list{
 ```
 
 ---
-#### Get posterior distribution of difference between average of two groups
-##### Stan: Model preparation
+## Evaluation of average difference and generated quantities block
+#### Stan: Model preparation
 
 .left-column[
 ```cpp
@@ -222,7 +221,7 @@ model {
 }
 
 generated quantities {
- // ビールAとBの売り上げ平均の差の事後分布を得る
+ // ビールAとBの売り上げ平均の差
   real diff;               
   diff = mu_b - mu_a;
 }
@@ -245,7 +244,8 @@ generated quantities {
 
 #### Get posterior distribution of difference between average of two groups
 
-<p>Rscriot</p>
+<p>Rscript</p>
+
 ```R
 # 乱数の生成
 mcmc_result_6 <- stan(
@@ -254,5 +254,15 @@ mcmc_result_6 <- stan(
   seed = 1
 )
 ```
+
+---
+#　Generalized linear model (GLM)
+
+- #### Basis of GLM
+- #### Example of GLM
+- #### Matrix expression of GLM
+- 
+---
+
 
 
