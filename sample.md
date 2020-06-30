@@ -281,23 +281,38 @@ mcmc_result_6 <- stan(
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="y = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 
+<!-- section one -->
 > In this case, link function is an identity function<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=g(u_i)&space;=&space;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g(u_i)&space;=&space;u_i" title="g(u_i) = u_i" /></a><br>
-><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="y = \beta_0 + \beta_1x_1 + \beta_1x_2" /><br>
-
 ><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
 
+<!-- section two -->
 <img src="https://latex.codecogs.com/gif.latex?y&space;=&space;sin(\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2)" title="y = sin(\beta_0 + \beta_1x_1 + \beta_1x_2)" /><br>
 
 > In this case, link function is a sin()<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=sin()" target="_blank"><img src="https://latex.codecogs.com/gif.latex?sin()" title="sin()" /></a>
-
 ><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
 
-
-
-
 ---
+## Analysis of variance model
+
+### When explanatory variables are categorical data, dammy variables are used instead.
+|  Categorical data  |  Dammy variable  |
+| ---- | ---- |
+|  Rainy      |  1  |
+|  Sunny      |  0  |
+
+### If there are k categorical variables, k-1 dummy variables are needed
+<img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
+<img src="https://latex.codecogs.com/gif.latex?x_{i2}" title="x_{i2}" /> is dummy variable which takes 1 when rainy and takes 0 when sunny<br>
+  
+<img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}" title="u_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2}" /><br>
+<img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
+
+|  Cloudy  | <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0" title="\beta_0" /></a>  |
+| ---- | ---- |
+|  Sunny      |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_1" title="\beta_0 + \beta_1" /></a>  |
+|  Rainy     |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_2" title="\beta_0 + \beta_2" /></a>  |
 
 
-
+  
