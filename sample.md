@@ -24,7 +24,7 @@ transformed data{}:  Define data transformation
 <br><br>
 transformed parameters{}: Define parameters transformation
 <br><br>
-<b>model{}: Define model structure and assignment</b>
+<b>model{}: Define model structure</b>
 <br><br>
 generated quantities{}: Get posterior distribution
 ]
@@ -169,10 +169,7 @@ model{
 ## Evaluation of average difference and generated quantities block
 
 #### Get posterior distribution of difference between average of two groups
-#### 
-
-.left-column[
-# R: Data preparation
+##### R: Data preparation
 ```R
 > head(file_beer_sales_ab)
    sales beer_name
@@ -195,10 +192,12 @@ data_list_ab <- list{
   N = 100
 }
 ```
-]
 
-.right-column[
-# Stan: Model preparation
+---
+#### Get posterior distribution of difference between average of two groups
+##### Stan: Model preparation
+
+.left-column[
 ```cpp
 data {
   //以下のデータを使う
@@ -227,6 +226,18 @@ generated quantities {
   diff = mu_b - mu_a;
 }
 ```
+]
+
+.right-column[
+- Model of diff can be estimated from mu_a and mu_b
+
+- Unlike mu and sigma, diff is not needed to estimate model
+
+- Generated quantities{} is faster than model{}
+
+- Non related paeameters to estimation is better to
+wiritten in Generated quantities{}
+
 ]
 
 ---
