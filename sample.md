@@ -49,7 +49,7 @@ model {
     sales[i] ~ normal(mu, sigma);
   }
 }
-
+//最後に空白行が必要
 ```
 ]
 
@@ -98,6 +98,7 @@ model{
     sales[i] ~ normal(mu, sigma);
   }
 }
+//
 
 ```
 
@@ -168,8 +169,8 @@ model{
 
 ---
 ## Evaluation of average difference and generated quantities block
-
-#### R: Data preparation
+#### Get posterior distribution of difference between average of two groups
+<p>R: Data preparation</p>
 ```R
 > head(file_beer_sales_ab)
    sales beer_name
@@ -195,19 +196,18 @@ data_list_ab <- list{
 
 ---
 ## Evaluation of average difference and generated quantities block
-#### Stan: Model preparation
-
+#### Get posterior distribution of difference between average of two groups
+<p>Stan Model preparation</p>
 .left-column[
 ```cpp
 data {
-  //以下のデータを使う
   int N;                
   vector[N] sales_a;     
   vector[N] sales_b;     
 }
 
 parameters {
-  //これらの事後分布を得たい
+//これらのパラメータを推定
   real mu_a;               
   real<lower=0> sigma_a;    
   real mu_b;               
@@ -215,7 +215,6 @@ parameters {
 }
 
 model {
-  // サンプルの分布は以下の通り
   sales_a ~ normal(mu_a, sigma_a);
   sales_b ~ normal(mu_b, sigma_b);
 }
@@ -245,7 +244,6 @@ generated quantities {
 #### Get posterior distribution of difference between average of two groups
 
 <p>Rscript</p>
-
 ```R
 # 乱数の生成
 mcmc_result_6 <- stan(
@@ -261,7 +259,7 @@ mcmc_result_6 <- stan(
 - #### Basis of GLM
 - #### Example of GLM
 - #### Matrix expression of GLM
-- 
+
 ---
 
 
