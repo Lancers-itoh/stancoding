@@ -265,10 +265,10 @@ mcmc_result_6 <- stan(
 
 ---
 ## Possibility distribution・Linear predictor・Link function
-Responsible valiable:  Interested variable<br>
-Explanatory valiable:  Variable that affect responsible variable<br>
-Liear predictor: Linear combination of explanatory variables<br>
-Link function: Function that connects linear predictor and responsible valiable<br>
+Responsible valiable:   Interested variable<br>
+Explanatory valiable:   Variable that affect responsible variable<br>
+Liear predictor:        Linear combination of explanatory variables<br>
+Link function:          Function that connects linear predictor and responsible valiable<br>
 
 
 
