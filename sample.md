@@ -156,14 +156,22 @@ model{
 
 #### Is there a difference in sales between Beer A and Beer B?
 
-###### Classic statistcs: Test difference between average of two groups
- <p>
-  Test by using assumed distribution like t-distribution
-</p>
-###### Bysian statistcs: Get posterior distribution of difference between average of two groups</p>
-<p>
-  Test by estiated distribution by MCMC
-</p>
+- #### Classic statistcs: Test difference between average of two groups
+ - Test by using assumed distribution like t-distribution
+ 
+- #### Bysian statistcs: Get posterior distribution of difference between average of two groups</p>
+ - Test by using estiated distribution by MCMC
 <br>
+
+```R
+> head(file_beer_sales_ab)
+   sales beer_name
+1  87.47         A
+2 103.67         A
+3  83.29         A
+4 131.91         A
+5 106.59         A
+6  83.59         A
+```
 <img src = "./2-6-1-beer-ab.png" width = 60%>
 
