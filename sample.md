@@ -322,8 +322,7 @@ Link function ( Responsible variables ) = Linear predictor
 ---
 
 ## Normal linear model
-#### Model that assuming a normal distribution
-<img src = "thermo.png" width = 20%><br> 
+#### Model that assuming a normal distribution<img src = "thermo.png" width = 10%><br> 
 
 <img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
 <img src="https://latex.codecogs.com/gif.latex?x_{i2}" title="x_{i2}" /> is dummy variable which takes 1 when rainy and takes 0 when sunny<br>
@@ -341,8 +340,7 @@ Link function ( Responsible variables ) = Linear predictor
  
 ## Poisson regression model
 #### Model that assuming a poisson distribution
-#### When responsible values takes integer that greater than 0, poisson distribution is often used. 
-<img src = "fishes.png" width = 20%><br> 
+#### When responsible values takes integer that greater than 0, poisson distribution is often used. <img src = "fishes.png" width = 10%><br> 
 
 <img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;x_{i1}&space;&plus;&space;\beta_2&space;x_{i2}&space;&plus;&space;\beta_3&space;x_{i3}" title="log(\lambda _i) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;\mathrm{Poiss}(\lambda&space;_i)" title="y_i \sim \mathrm{Poiss}(\lambda _i)" /><br>
@@ -359,19 +357,19 @@ Below is the same mean
 ---
 #### Logistic regression model
 #### Model that assuming a binomial distribution
-#### When responsible values are binary random variable, binomial distribution is often used. 
-<img src = "cointoss.png" width = 20%><br> 
+#### When responsible values are binary random variable, binomial distribution is often used. <img src = "cointoss.png" width = 10%><br> 
+
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logit(p_i)}&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}" title="\mathrm{logit(p_i)} = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2}" /><br>
-<img src="https://latex.codecogs.com/gif.latex?y_i\sim&space;\mathrm{Binom}(10,&space;p_i)" title="y_i\sim \mathrm{Binom}(10, p_i)" />
+<img src="https://latex.codecogs.com/gif.latex?y_i\sim&space;\mathrm{Binom}(10,&space;p_i)" title="y_i\sim \mathrm{Binom}(10, p_i)" /><br>
 
-Link function is logit function
-<img src="https://latex.codecogs.com/gif.latex?logit(p)&space;=&space;log[\frac{p}{1-p}]" title="logit(p) = log[\frac{p}{1-p}]" />
-This is reverse function of logistic function
-<img src="https://latex.codecogs.com/gif.latex?p_i&space;=&space;\mathrm{logitstic}(\mathrm{logit}(p_i))" title="p_i = \mathrm{logitstic}(\mathrm{logit}(p_i))" /><
-<img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" />
+Link function is logit function<br>
+<img src="https://latex.codecogs.com/gif.latex?logit(p)&space;=&space;log[\frac{p}{1-p}]" title="logit(p) = log[\frac{p}{1-p}]" /><br>
+This is reverse function of logistic function<br>
+<img src="https://latex.codecogs.com/gif.latex?p_i&space;=&space;\mathrm{logitstic}(\mathrm{logit}(p_i))" title="p_i = \mathrm{logitstic}(\mathrm{logit}(p_i))" /><br>
+<img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" /><br>
 
-Because logistic finction takes 0 to 1, it's useful to express possibility
-<img src = "./logistic.png" width = 60%>
+Because logistic finction takes 0 to 1, it's useful to express possibility<br>
+<img src = "./logistic.png" width = 30%><br>
 
 #### Model that have below properties is called logistic regression model
  1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
@@ -382,9 +380,9 @@ Because logistic finction takes 0 to 1, it's useful to express possibility
 ---
 ## Matrix expression of GLM
 #### Poisson regression 
-<img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;.&space;.&space;.&space;&plus;&space;\beta_jx_{ij}&space;.&space;.&space;.&space;&plus;&space;\beta_Jx_{iJ}" title="log(\lambda _i) = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + . . . + \beta_jx_{ij} . . . + \beta_Jx_{iJ}" />
+<img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;.&space;.&space;.&space;&plus;&space;\beta_jx_{ij}&space;.&space;.&space;.&space;&plus;&space;\beta_Jx_{iJ}" title="log(\lambda _i) = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + . . . + \beta_jx_{ij} . . . + \beta_Jx_{iJ}" /><br>
 #### This can be described as followed
-<img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\sum&space;_{j=0}^J\beta_jx_{ij}" title="log(\lambda _i) = \sum _{j=0}^J\beta_jx_{ij}" />
+<img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\sum&space;_{j=0}^J\beta_jx_{ij}" title="log(\lambda _i) = \sum _{j=0}^J\beta_jx_{ij}" /><br>
 
 <b>Little complex expression ...</b> 
 
