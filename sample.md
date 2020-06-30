@@ -173,6 +173,7 @@ model{
 <p>R: Data preparation</p>
 
 ```R
+file_beer_ab <- read.csv("2-6-1-beer-sales-ab.csv")
 > head(file_beer_sales_ab)
    sales beer_name
 1  87.47         A
