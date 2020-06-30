@@ -105,22 +105,23 @@ model{
 ## Weak-informative prior distribution
 .left-column[
 #### Sometimes, we can estimate the range of parameters.
-<p>i.e., Daily sales of a store can not be 50 trillion yen</p>
+><p>i.e., Daily sales of a store can not be 50 trillion yen</p>
 
-<p>When we can estimate that the range of parameter bete is -5 to 5, 
+><p>When we can estimate that the range of parameter bete is -5 to 5, 
   we can specify prior distribution as </p>
   
-  *beta* ~ normal(0, 5); 
+>  *beta* ~ normal(0, 5); 
  
 #### Bad weak-informative prior distribution
+
 > *beta* ~ uniform(-5, 5);<br>
 > beta takes only -5 to 5 values. It's better to allow unexpected number. 
   
 ]
 
 .right-column[
- <img src = "./Beta_dnorm.png" width = 40%>
- <img src = "./dunif.png" width = 40%>
+ <img src = "./Beta_dnorm.png" width = 60%><br>
+ <img src = "./dunif.png" width = 60%>
 ]
 
 ---
