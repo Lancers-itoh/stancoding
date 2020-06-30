@@ -171,6 +171,7 @@ model{
 ## Evaluation of average difference and generated quantities block
 #### Get posterior distribution of difference between average of two groups
 <p>R: Data preparation</p>
+
 ```R
 > head(file_beer_sales_ab)
    sales beer_name
@@ -199,6 +200,7 @@ data_list_ab <- list{
 #### Get posterior distribution of difference between average of two groups
 <p>Stan Model preparation</p>
 .left-column[
+
 ```cpp
 data {
   int N;                
@@ -244,6 +246,7 @@ generated quantities {
 #### Get posterior distribution of difference between average of two groups
 
 <p>Rscript</p>
+
 ```R
 # 乱数の生成
 mcmc_result_6 <- stan(
