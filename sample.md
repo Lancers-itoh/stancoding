@@ -117,7 +117,8 @@ When we can estimate that range of parameter *beta* is -5 to 5,
 #### Bad weak-informative prior distribution
 
 > *beta* ~ uniform(-5, 5);<br>
-> beta takes only -5 to 5 values. It's better to allow unexpected number. 
+
+In thi model, *beta* takes only -5 to 5 values. It's better to allow unexpected number. 
   
 ]
 
