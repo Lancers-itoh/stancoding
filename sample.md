@@ -158,22 +158,22 @@ model{
 
 #### Is there a difference in sales between Beer A and Beer B?
 
-- #### Classic statistcs: Test difference between average of two groups
+- #### Classic statistcs
   - Test using assumed distribution like t-distribution
  
-- #### Bysian statistcs: Get posterior distribution of difference between average of two groups</p>
-  - Test using estiated distribution by MCMC
+- #### Bysian statistcs
+  - Test using estimated distribution by MCMC
 <br>
 
 <img src = "./2-6-1-beer-ab.png" width = 40%>
 
 ---
 ## Evaluation of average difference and generated quantities block
-#### Get posterior distribution of difference between average of two groups
+#### Estimate posterior distribution of difference between average of two groups
 <p>R: Data preparation</p>
 
 ```R
-file_beer_ab <- read.csv("2-6-1-beer-sales-ab.csv")
+> file_beer_ab <- read.csv("2-6-1-beer-sales-ab.csv")
 > head(file_beer_sales_ab)
    sales beer_name
 1  87.47         A
@@ -198,7 +198,7 @@ data_list_ab <- list(
 
 ---
 ## Evaluation of average difference and generated quantities block
-#### Get posterior distribution of difference between average of two groups
+#### Estimate posterior distribution of difference between average of two groups
 <p>Stan Model preparation</p>
 .left-column[
 
@@ -244,7 +244,7 @@ generated quantities {
 ---
 ## Evaluation of average difference and generated quantities block
 
-#### Get posterior distribution of difference between average of two groups
+#### Estimate posterior distribution of difference between average of two groups
 
 <p>Rscript</p>
 
@@ -329,7 +329,7 @@ Link function:          Function that connects linear predictor and responsible 
 <img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;\beta_3x_{i3}" title="u_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \beta_3x_{i3}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
- #### Like this model, model that have below properties is called normal linear model
+ #### Model that have below properties is called normal linear model
  1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
  2. Identity function is kink function
  3. Normal distribution is used as possibility distribution
@@ -343,4 +343,15 @@ Link function:          Function that connects linear predictor and responsible 
 <img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;x_{i1}&space;&plus;&space;\beta_2&space;x_{i2}&space;&plus;&space;\beta_3&space;x_{i3}" title="log(\lambda _i) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;\mathrm{Poiss}(\lambda&space;_i)" title="y_i \sim \mathrm{Poiss}(\lambda _i)" /><br>
 
+#### Model that have below properties is called normal poisson regression model
+ 1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
+ 2. Log function is kink function
+ 3. Poissom distribution is used as possibility distribution
+
 ---
+#### Logistic regression model
+
+---
+#### Matrix expression of GLM
+
+
