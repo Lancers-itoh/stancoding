@@ -157,10 +157,10 @@ model{
 #### Is there a difference in sales between Beer A and Beer B?
 
 - #### Classic statistcs: Test difference between average of two groups
-  - Test by using assumed distribution like t-distribution
+  - Test using assumed distribution like t-distribution
  
 - #### Bysian statistcs: Get posterior distribution of difference between average of two groups</p>
-  - Test by using estiated distribution by MCMC
+  - Test using estiated distribution by MCMC
 <br>
 
 <img src = "./2-6-1-beer-ab.png" width = 40%>
@@ -170,7 +170,9 @@ model{
 
 #### Get posterior distribution of difference between average of two groups
 
+.left-column[
 ```R
+#Rscript
 > head(file_beer_sales_ab)
    sales beer_name
 1  87.47         A
@@ -182,6 +184,7 @@ model{
 ```
 
 ```R
+#Rscript
 sales_a <- file_beer_ab$sales[1:100]
 sales_b <- file_beer_ab$sales[101:200]
 
@@ -191,5 +194,47 @@ data_list_ab <- list{
   N = 100
 }
 ```
+]
 
+.right-column[
+```
+data {
+  int N;                  // サンプルサイズ
+  vector[N] sales_a;      // ビールAの売り上げデータ
+  vector[N] sales_b;      // ビールBの売り上げデータ
+}
 
+parameters {
+  real mu_a;                // ビールAの平均
+  real<lower=0> sigma_a;    // ビールAの標準偏差
+  real mu_b;                // ビールBの平均
+  real<lower=0> sigma_b;    // ビールBの標準偏差
+}
+
+model {
+  // 平均mu、標準偏差sigmaの正規分布に従ってデータが得られたと仮定
+  sales_a ~ normal(mu_a, sigma_a);
+  sales_b ~ normal(mu_b, sigma_b);
+}
+
+generated quantities {
+  real diff;                // ビールAとBの売り上げ平均の差
+  diff = mu_b - mu_a;
+}
+```
+]
+
+---
+## Evaluation of average difference and generated quantities block
+
+#### Get posterior distribution of difference between average of two groups
+
+```
+# 乱数の生成
+mcmc_result_6 <- stan(
+  file = "2-6-5-difference-mean.stan",
+  data = data_list_db,
+  seed = 1
+)
+
+```
