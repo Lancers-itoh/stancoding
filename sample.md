@@ -369,7 +369,6 @@ This is reverse function of logistic function<br>
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" /><br>
 
 Because logistic finction takes 0 to 1, it's useful to express possibility<br>
-<img src = "./logistic.png" width = 30%><br>
 
 #### Model that have below properties is called logistic regression model
  1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
