@@ -167,7 +167,7 @@ model{
   - Test using estimated distribution by MCMC
 <br>
 
-<img src = "./2-6-1-beer-ab.png" width = 40%>
+<img src = "./2-6-1-beer-ab.png" width = 60%>
 
 ---
 ## Evaluation of average difference and generated quantities block
@@ -275,9 +275,9 @@ Link function:          Function that connects linear predictor and responsible 
 
 
 
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=Responsible&space;Variable&space;=&space;Link&space;Function(&space;Linear&space;Predictor&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Responsible&space;Variable&space;=&space;Link&space;Function(&space;Linear&space;Predictor&space;)" title="Responsible Variable = Link Function( Linear Predictor )" /></a>
-
+```
+Link function ( Responsible variables ) = Linear predictor
+```
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="y = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 
@@ -366,6 +366,11 @@ Link function is logit function
 <img src="https://latex.codecogs.com/gif.latex?logit(p)&space;=&space;log[\frac{p}{1-p}]" title="logit(p) = log[\frac{p}{1-p}]" />
 This is reverse function of logistic function
 <img src="https://latex.codecogs.com/gif.latex?p_i&space;=&space;\mathrm{logitstic}(\mathrm{logit}(p_i))" title="p_i = \mathrm{logitstic}(\mathrm{logit}(p_i))" /><
+<img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" />
+
+Because  logistic
+<img src = "./logistic.png" width = 60%>
+
 
 ---
 
