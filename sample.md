@@ -188,11 +188,11 @@ model{
 sales_a <- file_beer_ab$sales[1:100]
 sales_b <- file_beer_ab$sales[101:200]
 
-data_list_ab <- list{
+data_list_ab <- list(
   sales_a = sales_a,
   sales_b = sales_b,
   N = 100
-}
+)
 ```
 
 ---
@@ -251,7 +251,7 @@ generated quantities {
 # 乱数の生成
 mcmc_result_6 <- stan(
   file = "2-6-5-difference-mean.stan", 
-  data = data_list_db,  
+  data = data_list_ab,  
   seed = 1
 )
 ```
@@ -262,6 +262,39 @@ mcmc_result_6 <- stan(
 - #### Basis of GLM
 - #### Example of GLM
 - #### Matrix expression of GLM
+
+---
+## Possibility distribution・Linear predictor・Link function
+- Responsible valiable:  Interested variable
+
+- Explanatory valiable:  Variable that affect responsible variable
+
+- Liear predictor: Linear combination of explanatory variables
+
+- Link function: Function that connects linear predictor and responsible valiable
+
+
+
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Responsible&space;Variable&space;=&space;Link&space;Function(&space;Linear&space;Predictor&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Responsible&space;Variable&space;=&space;Link&space;Function(&space;Linear&space;Predictor&space;)" title="Responsible Variable = Link Function( Linear Predictor )" /></a>
+
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="y = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
+> <img src="https://latex.codecogs.com/gif.latex?g(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_2x_2" title="g(u_i) = \beta_0 + \beta_1x_1 + \beta_2x_2" /> <br>
+> g() is identity function and, link function<br>
+><a href="https://www.codecogs.com/eqnedit.php?latex=g(u_i)&space;=&space;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g(u_i)&space;=&space;u_i" title="g(u_i) = u_i" /></a><br>
+><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="y = \beta_0 + \beta_1x_1 + \beta_1x_2" /><br>
+
+><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
+
+<img src="https://latex.codecogs.com/gif.latex?y&space;=&space;sin(\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2)" title="y = sin(\beta_0 + \beta_1x_1 + \beta_1x_2)" /><br>
+
+> In this case, link function is <br><a href="https://www.codecogs.com/eqnedit.php?latex=sin()" target="_blank"><img src="https://latex.codecogs.com/gif.latex?sin()" title="sin()" /></a>
+
+><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu,&space;\sigma^2)" title="y_i \sim Normal(\mu, \sigma^2)" /><br>
+
+
+
 
 ---
 
