@@ -291,6 +291,10 @@ lp__    -719.42    0.03 1.45 -723.21 -719.07 -717.65  2249    1
 
 ---
 ## Possibility distribution・Linear predictor・Link function
+
+#### GLM is composed from possibility distribution, linear predictor, link function
+Possibility distribution is necessary to describe stochastic process that creates observed data<br><br>
+
 Responsible valiable:   Interested variable<br>
 Explanatory valiable:   Variable that affect responsible variable<br>
 Liear predictor:        Linear combination of explanatory variables<br>
@@ -303,8 +307,7 @@ Link function ( Responsible variables ) = Linear predictor
 ```
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="u_i = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
-
+><a href="https://www.codecogs.com/eqnedit.php?latex=u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="u_i = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 <!-- section one -->
 > In this case, link function is an identity function<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=g(u_i)&space;=&space;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g(u_i)&space;=&space;u_i" title="g(u_i) = u_i" /></a><br>
@@ -312,7 +315,8 @@ Link function ( Responsible variables ) = Linear predictor
 <br>
 <br>
 <!-- section two -->
-<a href="https://www.codecogs.com/eqnedit.php?latex=log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="log(u_i) = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
+
+><a href="https://www.codecogs.com/eqnedit.php?latex=log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="log(u_i) = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 
 >In this case, link function is log()<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=sin()" target="_blank"><img src="https://latex.codecogs.com/gif.latex?sin()" title="sin()" /></a>
