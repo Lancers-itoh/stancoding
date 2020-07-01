@@ -279,15 +279,17 @@ Link function:          Function that connects linear predictor and responsible 
 Link function ( Responsible variables ) = Linear predictor
 ```
 
-><a href="https://www.codecogs.com/eqnedit.php?latex=u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="u_i = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="u_i = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 
 <!-- section one -->
 > In this case, link function is an identity function<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=g(u_i)&space;=&space;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g(u_i)&space;=&space;u_i" title="g(u_i) = u_i" /></a><br>
 ><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
-
+<br>
+<br>
 <!-- section two -->
-><a href="https://www.codecogs.com/eqnedit.php?latex=log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="log(u_i) = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(u_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_1x_2" title="log(u_i) = \beta_0 + \beta_1x_1 + \beta_1x_2" /></a>
 
 >In this case, link function is log()<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=sin()" target="_blank"><img src="https://latex.codecogs.com/gif.latex?sin()" title="sin()" /></a>
@@ -298,10 +300,12 @@ Link function ( Responsible variables ) = Linear predictor
 ## Analysis of variance model
 
 #### When explanatory variables are categorical data, dammy variables are used instead.
+------------------------
 | Categorical　| Dammy |
 | ---- | ---- |
 |  Rainy      |  1  |
 |  Sunny      |  0  |
+------------------------
 
 #### If there are k categorical variables, k-1 dummy variables are needed
 <img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
@@ -310,11 +314,13 @@ Link function ( Responsible variables ) = Linear predictor
 <img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}" title="u_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
+------------------------
 | Whether | <img src="https://latex.codecogs.com/gif.latex?u_i" title="u_i" /> |
 | ---- | ---- |
 |  Cloudy  | <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0" title="\beta_0" /></a>  |
 |  Sunny      |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_1" title="\beta_0 + \beta_1" /></a>  |
 |  Rainy     |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_2" title="\beta_0 + \beta_2" /></a>  |
+------------------------
 
 #### Explanatory variables are categorical data, and possibility distribution is normal distribution.
 #### Such a model is called Analysis of variance model 
@@ -366,7 +372,6 @@ Below is the same mean
 <img src="https://latex.codecogs.com/gif.latex?y_i\sim&space;\mathrm{Binom}(10,&space;p_i)" title="y_i\sim \mathrm{Binom}(10, p_i)" /><br>
 
 Link function is logit function | reverse function of logistic function<br>
-<img src="https://latex.codecogs.com/gif.latex?logit(p)&space;=&space;log[\frac{p}{1-p}]" title="logit(p) = log[\frac{p}{1-p}]" /><br>
 <img src="https://latex.codecogs.com/gif.latex?p_i&space;=&space;\mathrm{logitstic}(\mathrm{logit}(p_i))" title="p_i = \mathrm{logitstic}(\mathrm{logit}(p_i))" /><br>
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" /><br>
 
@@ -391,11 +396,16 @@ Because logistic finction takes 0 to 1, it's useful to express possibility<br>
 <img src="https://latex.codecogs.com/gif.latex?x_i\beta&space;=&space;\begin{bmatrix}&space;1&space;&&space;x_{i1}&space;&&space;x_{i2}&space;&&space;x_{i3}&space;\end{bmatrix}\begin{bmatrix}&space;\beta_0\\&space;\beta_1\\&space;\beta_2\\&space;\beta_3\\&space;\end{bmatrix}&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;\beta_3x_{i3}" title="x_i\beta = \begin{bmatrix} 1 & x_{i1} & x_{i2} & x_{i3} \end{bmatrix}\begin{bmatrix} \beta_0\\ \beta_1\\ \beta_2\\ \beta_3\\ \end{bmatrix} = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \beta_3x_{i3}" />
 
 <img src="https://latex.codecogs.com/gif.latex?\lambda&space;_i&space;=&space;x_i\beta" title="\lambda _i = x_i\beta" />
-<img src="https://latex.codecogs.com/gif.latex?\mathrm{y_i&space;}\sim&space;\mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" title="\mathrm{y_i }\sim \mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" />
+<img src="https://latex.codecogs.com/gif.latex?\mathrm{y_i&space;}\sim&space;\mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" title="\mathrm{y_i }\sim \mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" /><br>
 <b>Became quit simpler now</b>
 
 
 
+
+---
+
+<img src="https://latex.codecogs.com/gif.latex?logit(p)&space;=&space;log[\frac{p}{1-p}]" title="logit(p) = log[\frac{p}{1-p}]" /><br>
+<img src = "logistic.png" width= 60%>
 
 ---
 
