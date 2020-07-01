@@ -420,13 +420,6 @@ Because logistic finction takes 0 to 1, it's useful to express possibility<br>
 <b>Became quit simpler now</b>
 
 
-
-
----
-
-<img src="https://latex.codecogs.com/gif.latex?logit(p)&space;=&space;log[\frac{p}{1-p}]" title="logit(p) = log[\frac{p}{1-p}]" /><br>
-<img src = "logistic.png" width= 60%>
-
 ---
 
 
