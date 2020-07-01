@@ -80,7 +80,7 @@ matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 ```
 
 Assignment statement
-```
+```cpp
 transformed_mu = exp(mu);
 ```
 
