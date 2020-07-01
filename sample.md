@@ -51,7 +51,7 @@ model {
 ]
 
 ---
-## Declaration of variavles and assignment
+## Declaration and assignment
 
 Number
 ```cpp
