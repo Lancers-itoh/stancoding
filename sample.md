@@ -356,7 +356,7 @@ Link function:          Function that connects linear predictor and responsible 
 
  #### Model that have below properties is called normal linear model
  1. Multipe explanatory variables can be used to linear predictor with regardless of categorical or qualitative data
- 2. Identity function is kink function
+ 2. Identity function is link function
  3. Normal distribution is used as possibility distribution
  
 ---
