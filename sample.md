@@ -259,7 +259,7 @@ mcmc_result_6 <- stan(
   seed = 1
 )
 ```
-結果
+Result
 
 ```
 > print(mcmc_result, probs = c(0.025, 0.5, 0.975))
