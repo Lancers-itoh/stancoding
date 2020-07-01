@@ -368,7 +368,6 @@ Link function ( Responsible variables ) = Linear predictor
 #### Model that assuming a poisson distribution
 #### When responsible values takes integer that greater than 0, poisson distribution is often used. <br>
 <img src = "fishes.png" width = 10%><br> 
-
 <img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;x_{i1}&space;&plus;&space;\beta_2&space;x_{i2}&space;&plus;&space;\beta_3&space;x_{i3}" title="log(\lambda _i) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;\mathrm{Poiss}(\lambda&space;_i)" title="y_i \sim \mathrm{Poiss}(\lambda _i)" /><br>
 
@@ -384,8 +383,7 @@ Below is the same mean
 ---
 ## Logistic regression model<img src = "cointoss.png" width = 5%>
 #### Model that assuming a binomial distribution
-#### When responsible values are binary random variable, binomial distribution is often used. <br>
-<br> 
+#### When responsible values are binary random variable, binomial distribution is often used. 
 
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logit(p_i)}&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}" title="\mathrm{logit(p_i)} = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i\sim&space;\mathrm{Binom}(10,&space;p_i)" title="y_i\sim \mathrm{Binom}(10, p_i)" /><br>
