@@ -162,10 +162,10 @@ model{
 #### Is there a difference in sales between Beer A and Beer B?
 
 - #### Classic statistcs
-  - Test using assumed distribution like t-distribution
+  - Statistical hypothesis test using t-distribution
  
 - #### Bysian statistcs
-  - Test using estimated distribution by MCMC
+  - Observe the posterior distribution of difference directly
 <br>
 
 <img src = "./2-6-1-beer-ab.png" width = 60%>
