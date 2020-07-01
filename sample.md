@@ -258,6 +258,20 @@ mcmc_result_6 <- stan(
   seed = 1
 )
 ```
+結果
+
+```
+> print(mcmc_result, probs = c(0.025, 0.5, 0.975))
+           mean se_mean   sd    2.5%     50%   97.5% n_eff Rhat
+mu_a     102.22    0.03 1.84   98.64  102.22  105.90  4352    1
+sigma_a   18.19    0.02 1.30   15.84   18.12   20.96  3742    1
+mu_b     168.88    0.05 2.92  163.14  168.91  174.54  3627    1
+sigma_b   29.11    0.03 2.09   25.37   28.96   33.63  4374    1
+diff      66.66    0.05 3.50   59.84   66.67   73.44  4094    1
+lp__    -719.42    0.03 1.45 -723.21 -719.07 -717.65  2249    1
+```
+95% dysian credt section is 59.82 to 73.55.
+Difference between average of two groups has this much
 
 ---
 ## Generalized linear model (GLM)
