@@ -54,7 +54,7 @@ model {
 ]
 
 ---
-## Declaration of variavles
+## Declaration of variavles and assignment
 
 Number
 ```cpp
@@ -79,6 +79,11 @@ int W[10];                    //Array with integer type of 10 elements
 real X[3,4];                  //Array with real number type of 3 rows and 4 columns
 vector[4] Y[2];               //Array with two vectors with four elements
 matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
+```
+
+### Assignment statement
+```
+transformed_mu = exp(mu);
 ```
 
 ---
