@@ -320,12 +320,12 @@ Link function ( Responsible variables ) = Linear predictor
 ## Analysis of variance model
 
 #### When explanatory variables are categorical data, dammy variables are used instead.
-------------------------
+
 | Categorical　| Dammy |
 | ---- | ---- |
 |  Rainy      |  1  |
 |  Sunny      |  0  |
-------------------------
+
 
 #### If there are k categorical variables, k-1 dummy variables are needed
 <img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
@@ -334,13 +334,11 @@ Link function ( Responsible variables ) = Linear predictor
 <img src="https://latex.codecogs.com/gif.latex?u_i&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}" title="u_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
 
-------------------------
 | Whether | <img src="https://latex.codecogs.com/gif.latex?u_i" title="u_i" /> |
 | ---- | ---- |
 |  Cloudy  | <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0" title="\beta_0" /></a>  |
 |  Sunny      |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_1" title="\beta_0 + \beta_1" /></a>  |
 |  Rainy     |  <a href="https://www.codecogs.com/eqnedit.php?latex=\beta_0&space;&plus;&space;\beta_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_0&space;&plus;&space;\beta_2" title="\beta_0 + \beta_2" /></a>  |
-------------------------
 
 #### Explanatory variables are categorical data, and possibility distribution is normal distribution.
 #### Such a model is called Analysis of variance model 
