@@ -245,7 +245,6 @@ generated quantities {
 
 ---
 ## Evaluation of average difference and generated quantities block
-
 #### Estimate posterior distribution of difference between average of two groups
 
 <p>Rscript</p>
@@ -271,13 +270,15 @@ diff      66.66    0.05 3.50   59.84   66.67   73.44  4094    1
 lp__    -719.42    0.03 1.45 -723.21 -719.07 -717.65  2249    1
 ```
 
-.left-column[
-95% dysian credt section is 59.82 to 73.55<br>
-Difference between average of two groups has this much<br>
-]
-.right-column[
-<img src="./diff_dens.png" width=40%>
-]
+---
+## Evaluation of average difference and generated quantities block
+#### Estimate posterior distribution of difference between average of two groups
+
+###### 95% dysian credt section is 59.82 to 73.55
+###### Difference between average of two groups has this much
+
+<img src="./diff_dens.png">
+
 
 ---
 ## Generalized linear model (GLM)
@@ -390,7 +391,6 @@ Below is the same mean
 <img src="https://latex.codecogs.com/gif.latex?y_i\sim&space;\mathrm{Binom}(10,&space;p_i)" title="y_i\sim \mathrm{Binom}(10, p_i)" /><br>
 
 Link function is logit function | reverse function of logistic function<br>
-<img src="https://latex.codecogs.com/gif.latex?p_i&space;=&space;\mathrm{logitstic}(\mathrm{logit}(p_i))" title="p_i = \mathrm{logitstic}(\mathrm{logit}(p_i))" /><br>
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" /><br>
 
 Because logistic finction takes 0 to 1, it's useful to express possibility<br>
