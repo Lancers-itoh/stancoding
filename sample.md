@@ -311,8 +311,7 @@ Link function ( Responsible variables ) = Linear predictor
 <!-- section one -->
 > In this case, link function is an identity function<br>
 ><a href="https://www.codecogs.com/eqnedit.php?latex=g(u_i)&space;=&space;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g(u_i)&space;=&space;u_i" title="g(u_i) = u_i" /></a><br>
-><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" /><br>
-<br>
+><img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;Normal(\mu_i,&space;\sigma^2&space;)" title="y_i \sim Normal(\mu_i, \sigma^2 )" />
 <br>
 <!-- section two -->
 
