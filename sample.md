@@ -346,9 +346,9 @@ Link function ( Responsible variables ) = Linear predictor
 
 ---
 
-## Normal linear model<img src = "thermo.png" width = 5%>
+## Normal linear model
 #### Model that assuming a normal distribution<br> 
-<br> 
+<img src = "thermo.png" width = 10%><br> 
 
 <img src="https://latex.codecogs.com/gif.latex?x_{i1}" title="x_{i1}" /> is dummy variable which takes 0 when rainy and takes 1 when sunny<br>
 <img src="https://latex.codecogs.com/gif.latex?x_{i2}" title="x_{i2}" /> is dummy variable which takes 1 when rainy and takes 0 when sunny<br>
@@ -364,10 +364,10 @@ Link function ( Responsible variables ) = Linear predictor
  
 ---
  
-## Poisson regression model<img src = "fishes.png" width = 5%>
+## Poisson regression model
 #### Model that assuming a poisson distribution
 #### When responsible values takes integer that greater than 0, poisson distribution is often used. <br>
-<br> 
+<img src = "fishes.png" width = 10%><br> 
 
 <img src="https://latex.codecogs.com/gif.latex?log(\lambda&space;_i)&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;x_{i1}&space;&plus;&space;\beta_2&space;x_{i2}&space;&plus;&space;\beta_3&space;x_{i3}" title="log(\lambda _i) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i&space;\sim&space;\mathrm{Poiss}(\lambda&space;_i)" title="y_i \sim \mathrm{Poiss}(\lambda _i)" /><br>
@@ -417,7 +417,7 @@ Because logistic finction takes 0 to 1, it's useful to express possibility<br>
 
 <img src="https://latex.codecogs.com/gif.latex?\lambda&space;_i&space;=&space;x_i\beta" title="\lambda _i = x_i\beta" />
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{y_i&space;}\sim&space;\mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" title="\mathrm{y_i }\sim \mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" /><br>
-<@>Became quit simpler now</p>
+<p>Became quit simpler now</p>
 
 
 ---
