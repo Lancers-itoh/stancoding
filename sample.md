@@ -78,7 +78,7 @@ vector[4] Y[2];               //Array with two vectors with four elements
 matrix[3,4] z[5,6];           //Array with 5 x 6 matrix with 3 x 4 matrix
 ```
 
-### Assignment statement
+Assignment statement
 ```
 transformed_mu = exp(mu);
 ```
