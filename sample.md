@@ -165,7 +165,7 @@ model{
 - #### Classic statistcs
   - Statistical hypothesis test using t-distribution
  
-- #### Bysian statistcs
+- #### bayesian statistcs
   - Observe the posterior distribution of difference directly
 <br>
 
