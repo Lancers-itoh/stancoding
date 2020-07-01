@@ -413,7 +413,7 @@ Because logistic finction takes 0 to 1, it's useful to express possibility<br>
 #### By using matrix, linear predictor can be described as followed
 <img src="https://latex.codecogs.com/gif.latex?x_i\beta&space;=&space;\begin{bmatrix}&space;1&space;&&space;x_{i1}&space;&&space;x_{i2}&space;&&space;x_{i3}&space;\end{bmatrix}\begin{bmatrix}&space;\beta_0\\&space;\beta_1\\&space;\beta_2\\&space;\beta_3\\&space;\end{bmatrix}&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}&space;&plus;&space;\beta_3x_{i3}" title="x_i\beta = \begin{bmatrix} 1 & x_{i1} & x_{i2} & x_{i3} \end{bmatrix}\begin{bmatrix} \beta_0\\ \beta_1\\ \beta_2\\ \beta_3\\ \end{bmatrix} = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \beta_3x_{i3}" />
 
-<img src="https://latex.codecogs.com/gif.latex?\lambda&space;_i&space;=&space;x_i\beta" title="\lambda _i = x_i\beta" />
+<img src="https://latex.codecogs.com/gif.latex?\lambda&space;_i&space;=&space;x_i\beta" title="\lambda _i = x_i\beta" /><br>
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{y_i&space;}\sim&space;\mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" title="\mathrm{y_i }\sim \mathrm{Poiss}(\mathrm{exp}(\lambda_i)))" /><br>
 <p>Became quit simpler now</p>
 
