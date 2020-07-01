@@ -389,6 +389,7 @@ Below is the same mean
 
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logit(p_i)}&space;=&space;\beta_0&space;&plus;&space;\beta_1x_{i1}&space;&plus;&space;\beta_2x_{i2}" title="\mathrm{logit(p_i)} = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2}" /><br>
 <img src="https://latex.codecogs.com/gif.latex?y_i\sim&space;\mathrm{Binom}(10,&space;p_i)" title="y_i\sim \mathrm{Binom}(10, p_i)" /><br>
+<img src="https://latex.codecogs.com/gif.latex?logit(p)&space;=&space;log[\frac{p}{1-p}]" title="logit(p) = log[\frac{p}{1-p}]" /><br>
 
 Link function is logit function | reverse function of logistic function<br>
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{logistic}(x)&space;=&space;\frac{1}{1&space;&plus;&space;\mathrm{exp}(-x)}" title="\mathrm{logistic}(x) = \frac{1}{1 + \mathrm{exp}(-x)}" /><br>
