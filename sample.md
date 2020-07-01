@@ -121,7 +121,7 @@ When we estimate that range of parameter *beta* is -5 to 5,
 
 > *beta* ~ uniform(-5, 5);<br>
 
-In thi model, *beta* takes only -5 to 5 values. It's better to allow unexpected number. 
+In this uniform distribution model, *beta* takes only -5 to 5 values. It's better to allow unexpected number. 
   
 ]
 
