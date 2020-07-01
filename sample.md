@@ -7,6 +7,7 @@ class: center, middle, inverse
 <br>Makino Lab reading circle  7/1 Itoh Thoma
 
 ---
+layout:false
 ## Structure of stan file
 .right-column[
 <br>
