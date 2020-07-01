@@ -270,8 +270,14 @@ sigma_b   29.11    0.03 2.09   25.37   28.96   33.63  4374    1
 diff      66.66    0.05 3.50   59.84   66.67   73.44  4094    1
 lp__    -719.42    0.03 1.45 -723.21 -719.07 -717.65  2249    1
 ```
-95% dysian credt section is 59.82 to 73.55.
-Difference between average of two groups has this much
+
+.left-column[
+95% dysian credt section is 59.82 to 73.55<br>
+Difference between average of two groups has this much<br>
+]
+.right-column[
+<img src="./diff_dens.png" width=40%>
+]
 
 ---
 ## Generalized linear model (GLM)
