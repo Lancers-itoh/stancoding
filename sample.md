@@ -107,7 +107,7 @@ model{
 ## Weak-informative prior distribution
 .left-column[
 #### Sometimes, we can estimate the range of parameters.
->i.e., Daily sales of a store can not be 50 trillion yen<br>
+> Daily sales of a store can not be 50 trillion yen<br>
 
 When we can estimate that range of parameter *beta* is -5 to 5, 
   we can specify prior distribution as 
