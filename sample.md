@@ -109,11 +109,11 @@ model{
 ---
 ## Weak-informative prior distribution
 .left-column[
-#### Sometimes, we can estimate the range of parameters.
+#### Sometimes, it's possible to estimate the range of parameters.
 > Daily sales of a store can not be 50 trillion yen<br>
 
-When we can estimate that range of parameter *beta* is -5 to 5, 
-  we can specify prior distribution as 
+When we estimate that range of parameter *beta* is -5 to 5, 
+  prior distribution is specified as followed
   
 >  *beta* ~ normal(0, 5); 
  
@@ -235,7 +235,7 @@ generated quantities {
 ]
 
 .right-column[
-- Distribution of diff can be estimated from model of mu_a and mu_b
+- Distribution of diff is estimated from model of mu_a and mu_b
 
 - Unlike mu and sigma, diff is not needed to estimate model
 
