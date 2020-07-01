@@ -2,13 +2,10 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-# Basis of stan coding
+# Detail of stan coding
+# Basis og general linear model
 <br>Rとstanではじめるベイズ統計モデリングによるデータ分析入門 
 <br>Makino Lab reading circle  7/1 Itoh Thoma
----
-layout:false
-### スタンコーディングの詳細
-### 一般化線形モデルの基本
 
 ---
 ## Structure of stan file
